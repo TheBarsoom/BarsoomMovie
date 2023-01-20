@@ -1,29 +1,10 @@
-import responseHandler from "../handlers/response.handler.js";
-import tmdbApi from "../tmdb/tmdb.api.js";
+import express from "express";
+import personController from "../controllers/person.controller.js";
 
-const personDetail = async (req, res) => {
-  try {
-    const { personId } = req.params;
+const router = express.Router({ mergeParams: true });
 
-    const person = await tmdbApi.personDetail({ personId });
+router.get("/:personId/medias", personController.personMedias);
 
-    responseHandler.ok(res, person);
-  } catch {
-    responseHandler.error(res);
-  }
-};
+router.get("/:personId", personController.personDetail);
 
-const personMedias = async (req, res) => {
-  try {
-    const { personId } = req.params;
-
-    const medias = await tmdbApi.personMedias({ personId });
-
-    responseHandler.ok(res, medias);
-  } catch {
-    responseHandler.error(res);
-  }
-};
-
-
-export default { personDetail, personMedias };
+export default router;
