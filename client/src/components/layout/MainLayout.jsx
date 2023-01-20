@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setListFavorites, setUser } from "../../redux/features/userSlice";
 import userApi from "../../api/modules/user.api";
+import {  Topbar,  } from "../../components";
 
 const MainLayout = () => {
   //saving user data
@@ -27,6 +28,7 @@ const MainLayout = () => {
     <>
 
       <Box component="main" flexGrow={1} overflow="hidden" minHeight="100vh">
+      <Topbar />
         <Box flexGrow={1} overflow="hidden" minHeight="100vh">
           <Outlet />
         </Box>
