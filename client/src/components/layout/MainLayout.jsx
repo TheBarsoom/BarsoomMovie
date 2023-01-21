@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setListFavorites, setUser } from "../../redux/features/userSlice";
 import userApi from "../../api/modules/user.api";
-import {  Topbar,Footer ,GlobalLoading } from "../../components";
+import { GlobalLoading, Footer, Topbar, AuthModal } from "../../components";
 
 const MainLayout = () => {
   //saving user data
@@ -26,7 +26,8 @@ const MainLayout = () => {
   }, [dispatch]);
   return (
     <>
-          <GlobalLoading />
+             <GlobalLoading />
+      <AuthModal />
 
       <Box component="main" flexGrow={1} overflow="hidden" minHeight="100vh">
       <Topbar />
