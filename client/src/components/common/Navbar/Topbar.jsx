@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { setAuthModalOpen } from "../../../redux/features/authModalSlice";
 import { setThemeMode } from "../../../redux/features/themeModeSlice";
 import {Logo,UserMenu,Sidebar} from "../../../components";
-scrollAS
+
 
 import { themeModes } from "../../../configs/theme.config";
 import menuConfigs from "../../../configs/menu.configs";
@@ -95,7 +95,15 @@ const Topbar = () => {
             {/* main menu */}
 
             {/* user menu */}
-           
+            <Stack spacing={3} direction="row" alignItems="center">
+              {!user && <Button
+                variant="contained"
+                onClick={() => dispatch(setAuthModalOpen(true))}
+              >
+                sign in
+              </Button>}
+            </Stack>
+            {user && <UserMenu />}
             {/* user menu */}
           </Toolbar>
         </AppBar>
