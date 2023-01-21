@@ -6,6 +6,8 @@ export {default as Footer} from "./common/Footer";
 export {default as Container} from "./common/Container";
 export {default as AutoSwiper} from "./common/AutoSwiper";
 export {default as CircularRate} from "./common/CircularRate";
+export {default as MediaSlide} from "./common/MediaSlide";
+export {default as MediaItem} from "./common/MediaItem";
 
 
 export {default as SigninForm} from "./common/Navbar/SigninForm";
