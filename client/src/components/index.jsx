@@ -4,6 +4,9 @@ export {default as Logo} from "./common/Logo";
 export {default as GlobalLoading} from "./common/GlobalLoading";
 export {default as Footer} from "./common/Footer";
 export {default as Container} from "./common/Container";
+export {default as AutoSwiper} from "./common/AutoSwiper";
+export {default as CircularRate} from "./common/CircularRate";
+
 
 export {default as SigninForm} from "./common/Navbar/SigninForm";
 export {default as SignupForm} from "./common/Navbar/SignupForm";
